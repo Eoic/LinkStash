@@ -1,6 +1,6 @@
-# TypeScript Vite starter template
+# LinkStash
 
-Front-end TypeScript starter with Vite and ESLint configuration.
+A simple web app for managing website bookmarks. 
 
 ### Installation and usage
 

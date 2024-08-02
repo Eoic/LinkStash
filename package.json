@@ -1,11 +1,12 @@
 {
-  "name": "typescript-vite-starter",
+  "name": "link-stash",
   "private": false,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
