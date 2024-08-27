@@ -28,3 +28,4 @@ For lint and build commands, see [package.json](./package.json).
 8. Profiles (e.g. work, leisure).
 9. Statistics (by usage frequency, category, tag).
 10. Easy self hosting.
+11. Browser plugin (for RMB -> "Save to ...").
