@@ -5,6 +5,7 @@ export default tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     {
+        files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
                 project: './tsconfig.eslint.json',
@@ -17,6 +18,15 @@ export default tseslint.config(
             quotes: ['error', 'single'],
             indent: ['error', 4],
             'max-len': ['error', 120],
+            'semi': ['error', 'always'],
+            'eol-last': ['error', 'always'],
+            'comma-dangle': ["error", {
+                "arrays": "never",
+                "objects": "always",
+                "imports": "never",
+                "exports": "never",
+                "functions": "never"
+            }],
             '@typescript-eslint/no-unused-vars': [
                 'warn',
                 {
