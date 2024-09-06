@@ -13,7 +13,7 @@ export default function CustomizedDataGrid() {
                 params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
             }
             initialState={{
-                pagination: { paginationModel: { pageSize: 20, }, },
+                pagination: { paginationModel: { pageSize: 20 } },
             }}
             pageSizeOptions={[10, 20, 50]}
             disableColumnResize
@@ -28,12 +28,12 @@ export default function CustomizedDataGrid() {
                         columnInputProps: {
                             variant: 'outlined',
                             size: 'small',
-                            sx: { mt: 'auto', },
+                            sx: { mt: 'auto' },
                         },
                         operatorInputProps: {
                             variant: 'outlined',
                             size: 'small',
-                            sx: { mt: 'auto', },
+                            sx: { mt: 'auto' },
                         },
                         valueInputProps: {
                             InputComponentProps: {

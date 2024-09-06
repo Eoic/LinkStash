@@ -8,7 +8,7 @@ export const surfacesCustomizations: Components<Theme> = {
             disableGutters: true,
         },
         styleOverrides: {
-            root: ({ theme, }) => ({
+            root: ({ theme }) => ({
                 padding: 4,
                 overflow: 'clip',
                 backgroundColor: theme.palette.background.default,
@@ -33,20 +33,20 @@ export const surfacesCustomizations: Components<Theme> = {
     },
     MuiAccordionSummary: {
         styleOverrides: {
-            root: ({ theme, }) => ({
+            root: ({ theme }) => ({
                 border: 'none',
                 borderRadius: 8,
-                '&:hover': { backgroundColor: gray[50], },
-                '&:focus-visible': { backgroundColor: 'transparent', },
+                '&:hover': { backgroundColor: gray[50] },
+                '&:focus-visible': { backgroundColor: 'transparent' },
                 ...theme.applyStyles('dark', {
-                    '&:hover': { backgroundColor: gray[800], },
+                    '&:hover': { backgroundColor: gray[800] },
                 }),
             }),
         },
     },
     MuiAccordionDetails: {
         styleOverrides: {
-            root: { mb: 20, border: 'none', },
+            root: { mb: 20, border: 'none' },
         },
     },
     MuiPaper: {
@@ -56,7 +56,7 @@ export const surfacesCustomizations: Components<Theme> = {
     },
     MuiCard: {
         styleOverrides: {
-            root: ({ theme, }) => {
+            root: ({ theme }) => {
                 return {
                     padding: 16,
                     gap: 16,
@@ -91,7 +91,7 @@ export const surfacesCustomizations: Components<Theme> = {
         styleOverrides: {
             root: {
                 padding: 0,
-                '&:last-child': { paddingBottom: 0, },
+                '&:last-child': { paddingBottom: 0 },
             },
         },
     },

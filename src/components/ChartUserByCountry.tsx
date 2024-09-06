@@ -17,10 +17,10 @@ import {
 } from '../internals/components/CustomIcons';
 
 const data = [
-    { label: 'India', value: 50000, },
-    { label: 'USA', value: 35000, },
-    { label: 'Brazil', value: 10000, },
-    { label: 'Other', value: 5000, }
+    { label: 'India', value: 50000 },
+    { label: 'USA', value: 35000 },
+    { label: 'Brazil', value: 10000 },
+    { label: 'Other', value: 5000 }
 ];
 
 const countries = [
@@ -56,7 +56,7 @@ interface StyledTextProps {
 
 const StyledText = styled('text', {
     shouldForwardProp: (prop) => prop !== 'variant',
-})<StyledTextProps>(({ theme, }) => ({
+})<StyledTextProps>(({ theme }) => ({
     textAnchor: 'middle',
     dominantBaseline: 'central',
     fill: theme.palette.text.secondary,
@@ -70,7 +70,7 @@ const StyledText = styled('text', {
             },
         },
         {
-            props: ({ variant, }) => variant !== 'primary',
+            props: ({ variant }) => variant !== 'primary',
             style: {
                 fontSize: theme.typography.body2.fontSize,
             },
@@ -84,7 +84,7 @@ const StyledText = styled('text', {
             },
         },
         {
-            props: ({ variant, }) => variant !== 'primary',
+            props: ({ variant }) => variant !== 'primary',
             style: {
                 fontWeight: theme.typography.body2.fontWeight,
             },
@@ -97,8 +97,8 @@ interface PieCenterLabelProps {
   secondaryText: string;
 }
 
-function PieCenterLabel({ primaryText, secondaryText, }: PieCenterLabelProps) {
-    const { width, height, left, top, } = useDrawingArea();
+function PieCenterLabel({ primaryText, secondaryText }: PieCenterLabelProps) {
+    const { width, height, left, top } = useDrawingArea();
     const primaryY = top + height / 2 - 10;
     const secondaryY = primaryY + 24;
 
@@ -125,13 +125,13 @@ export default function ChartUserByCountry() {
     return (
         <Card
             variant="outlined"
-            sx={{ display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1, }}
+            sx={{ display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1 }}
         >
             <CardContent>
                 <Typography component="h2" variant="subtitle2">
           Users by country
                 </Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center', }}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <PieChart
                         colors={colors}
                         margin={{
@@ -146,13 +146,13 @@ export default function ChartUserByCountry() {
                                 innerRadius: 75,
                                 outerRadius: 100,
                                 paddingAngle: 0,
-                                highlightScope: { faded: 'global', highlighted: 'item', },
+                                highlightScope: { faded: 'global', highlighted: 'item' },
                             }
                         ]}
                         height={260}
                         width={260}
                         slotProps={{
-                            legend: { hidden: true, },
+                            legend: { hidden: true },
                         }}
                     >
                         <PieCenterLabel primaryText="98.5K" secondaryText="Total" />
@@ -162,10 +162,10 @@ export default function ChartUserByCountry() {
                     <Stack
                         key={index}
                         direction="row"
-                        sx={{ alignItems: 'center', gap: 2, pb: 2, }}
+                        sx={{ alignItems: 'center', gap: 2, pb: 2 }}
                     >
                         {country.flag}
-                        <Stack sx={{ gap: 1, flexGrow: 1, }}>
+                        <Stack sx={{ gap: 1, flexGrow: 1 }}>
                             <Stack
                                 direction="row"
                                 sx={{
@@ -174,10 +174,10 @@ export default function ChartUserByCountry() {
                                     gap: 2,
                                 }}
                             >
-                                <Typography variant="body2" sx={{ fontWeight: '500', }}>
+                                <Typography variant="body2" sx={{ fontWeight: '500' }}>
                                     {country.name}
                                 </Typography>
-                                <Typography variant="body2" sx={{ color: 'text.secondary', }}>
+                                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                                     {country.value}%
                                 </Typography>
                             </Stack>

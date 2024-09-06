@@ -12,22 +12,22 @@ interface HeaderProps {
     toggleColorMode: (mode: string) => void
 }
 
-export default function Header({ toggleColorMode, colorMode, }: HeaderProps) {
+export default function Header({ toggleColorMode, colorMode }: HeaderProps) {
     return (
         <Stack
             direction="row"
             sx={{
-                display: { xs: 'none', md: 'flex', },
+                display: { xs: 'none', md: 'flex' },
                 width: '100%',
-                alignItems: { xs: 'flex-start', md: 'center', },
+                alignItems: { xs: 'flex-start', md: 'center' },
                 justifyContent: 'space-between',
-                maxWidth: { sm: '100%', md: '1700px', },
+                maxWidth: { sm: '100%', md: '1700px' },
                 pt: 1.5,
             }}
             spacing={2}
         >
             <NavbarBreadcrumbs />
-            <Stack direction="row" sx={{ gap: 1, }}>
+            <Stack direction="row" sx={{ gap: 1 }}>
                 <Search />
                 <CustomDatePicker />
                 <MenuButton showBadge aria-label="Open notifications">

@@ -17,7 +17,7 @@ import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import ToggleColorMode from './components/ToggleColorMode';
 import getDashboardTheme from './theme/getDashboardTheme';
 
-const StyledAppBar = styled(AppBar)(({ theme, }) => ({
+const StyledAppBar = styled(AppBar)(({ theme }) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -54,7 +54,7 @@ export default function TemplateFrame({
 
     return (
         <ThemeProvider theme={dashboardTheme}>
-            <Box sx={{ height: '100dvh', display: 'flex', flexDirection: 'column', }}>
+            <Box sx={{ height: '100dvh', display: 'flex', flexDirection: 'column' }}>
                 <StyledAppBar>
                     <Toolbar
                         variant="dense"
@@ -73,7 +73,7 @@ export default function TemplateFrame({
                             startIcon={<ArrowBackRoundedIcon />}
                             component="a"
                             href="/material-ui/getting-started/templates/"
-                            sx={{ display: { xs: 'none', sm: 'flex', }, }}
+                            sx={{ display: { xs: 'none', sm: 'flex' } }}
                         >
               Back to templates
                         </Button>
@@ -82,12 +82,12 @@ export default function TemplateFrame({
                             aria-label="Back to templates"
                             component="a"
                             href="/material-ui/getting-started/templates/"
-                            sx={{ display: { xs: 'auto', sm: 'none', }, }}
+                            sx={{ display: { xs: 'auto', sm: 'none' } }}
                         >
                             <ArrowBackRoundedIcon />
                         </IconButton>
-                        <Box sx={{ display: 'flex', gap: 1, }}>
-                            <FormControl variant="outlined" sx={{ minWidth: 180, }}>
+                        <Box sx={{ display: 'flex', gap: 1 }}>
+                            <FormControl variant="outlined" sx={{ minWidth: 180 }}>
                                 <Select
                                     size="small"
                                     labelId="theme-select-label"
@@ -108,7 +108,7 @@ export default function TemplateFrame({
                         </Box>
                     </Toolbar>
                 </StyledAppBar>
-                <Box sx={{ flex: '1 1', overflow: 'auto', }}>{children}</Box>
+                <Box sx={{ flex: '1 1', overflow: 'auto' }}>{children}</Box>
             </Box>
         </ThemeProvider>
     );

@@ -6,11 +6,11 @@ import { gray } from '../themePrimitives';
 export const chartsCustomizations: ChartsComponents<Theme> = {
     MuiChartsAxis: {
         styleOverrides: {
-            root: ({ theme, }) => ({
+            root: ({ theme }) => ({
                 [`& .${axisClasses.line}`]: {
                     stroke: gray[300],
                 },
-                [`& .${axisClasses.tick}`]: { stroke: gray[300], },
+                [`& .${axisClasses.tick}`]: { stroke: gray[300] },
                 [`& .${axisClasses.tickLabel}`]: {
                     fill: gray[500],
                     fontWeight: 500,
@@ -19,7 +19,7 @@ export const chartsCustomizations: ChartsComponents<Theme> = {
                     [`& .${axisClasses.line}`]: {
                         stroke: gray[700],
                     },
-                    [`& .${axisClasses.tick}`]: { stroke: gray[700], },
+                    [`& .${axisClasses.tick}`]: { stroke: gray[700] },
                     [`& .${axisClasses.tickLabel}`]: {
                         fill: gray[300],
                         fontWeight: 500,
@@ -30,12 +30,12 @@ export const chartsCustomizations: ChartsComponents<Theme> = {
     },
     MuiChartsTooltip: {
         styleOverrides: {
-            mark: ({ theme, }) => ({
+            mark: ({ theme }) => ({
                 ry: 6,
                 boxShadow: 'none',
                 border: `1px solid ${theme.palette.divider}`,
             }),
-            table: ({ theme, }) => ({
+            table: ({ theme }) => ({
                 border: `1px solid ${theme.palette.divider}`,
                 borderRadius: theme.shape.borderRadius,
                 background: 'hsl(0, 0%, 100%)',
@@ -56,7 +56,7 @@ export const chartsCustomizations: ChartsComponents<Theme> = {
     },
     MuiChartsGrid: {
         styleOverrides: {
-            root: ({ theme, }) => ({
+            root: ({ theme }) => ({
                 [`& .${chartsGridClasses.line}`]: {
                     stroke: gray[200],
                     strokeDasharray: '4 2',

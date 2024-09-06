@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
 
-function AreaGradient({ color, id, }: { color: string; id: string }) {
+function AreaGradient({ color, id }: { color: string; id: string }) {
     return (
         <defs>
             <linearGradient id={id} x1="50%" y1="0%" x2="50%" y2="100%">
@@ -44,16 +44,16 @@ export default function SessionsChart() {
     ];
 
     return (
-        <Card variant="outlined" sx={{ width: '100%', }}>
+        <Card variant="outlined" sx={{ width: '100%' }}>
             <CardContent>
                 <Typography component="h2" variant="subtitle2" gutterBottom>
           Sessions
                 </Typography>
-                <Stack sx={{ justifyContent: 'space-between', }}>
+                <Stack sx={{ justifyContent: 'space-between' }}>
                     <Stack
                         direction="row"
                         sx={{
-                            alignContent: { xs: 'center', sm: 'flex-start', },
+                            alignContent: { xs: 'center', sm: 'flex-start' },
                             alignItems: 'center',
                             gap: 1,
                         }}
@@ -63,7 +63,7 @@ export default function SessionsChart() {
                         </Typography>
                         <Chip size="small" color="success" label="+35%" />
                     </Stack>
-                    <Typography variant="caption" sx={{ color: 'text.secondary', }}>
+                    <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             Sessions per day for the last 30 days
                     </Typography>
                 </Stack>
@@ -121,8 +121,8 @@ export default function SessionsChart() {
                         }
                     ]}
                     height={250}
-                    margin={{ left: 50, right: 20, top: 20, bottom: 20, }}
-                    grid={{ horizontal: true, }}
+                    margin={{ left: 50, right: 20, top: 20, bottom: 20 }}
+                    grid={{ horizontal: true }}
                     sx={{
                         '& .MuiAreaElement-series-organic': {
                             fill: 'url(\'#organic\')',

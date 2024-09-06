@@ -38,7 +38,7 @@ export default function AppNavbar() {
         <AppBar
             position="fixed"
             sx={{
-                display: { xs: 'auto', md: 'none', },
+                display: { xs: 'auto', md: 'none' },
                 boxShadow: 0,
                 bgcolor: 'background.paper',
                 backgroundImage: 'none',
@@ -56,9 +56,9 @@ export default function AppNavbar() {
                         width: '100%',
                     }}
                 >
-                    <Stack direction="row" spacing={1} sx={{ justifyContent: 'center', }}>
+                    <Stack direction="row" spacing={1} sx={{ justifyContent: 'center' }}>
                         <CustomIcon />
-                        <Typography variant="h4" component="h1" sx={{ color: 'text.primary', }}>
+                        <Typography variant="h4" component="h1" sx={{ color: 'text.primary' }}>
               Dashboard
                         </Typography>
                     </Stack>
@@ -92,7 +92,7 @@ export function CustomIcon() {
                 boxShadow: 'inset 0 2px 5px rgba(255, 255, 255, 0.3)',
             }}
         >
-            <DashboardRoundedIcon color="inherit" sx={{ fontSize: '1rem', }} />
+            <DashboardRoundedIcon color="inherit" sx={{ fontSize: '1rem' }} />
         </Box>
     );
 }

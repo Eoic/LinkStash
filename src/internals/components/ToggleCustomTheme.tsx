@@ -40,7 +40,7 @@ export default function ToggleCustomTheme({
                 }}
             >
                 <ToggleButton value>
-                    <AutoAwesomeRoundedIcon sx={{ mr: 1, }} />
+                    <AutoAwesomeRoundedIcon sx={{ mr: 1 }} />
           Custom theme
                 </ToggleButton>
                 <ToggleButton data-screenshot="toggle-default-theme" value={false}>

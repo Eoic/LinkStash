@@ -17,7 +17,7 @@ import SideMenu from './components/SideMenu';
 export default function Dashboard() {
     const [mode, setMode] = React.useState<PaletteMode>('light');
     const [showCustomTheme, setShowCustomTheme] = React.useState(true);
-    const defaultTheme = createTheme({ palette: { mode, }, });
+    const defaultTheme = createTheme({ palette: { mode } });
     const dashboardTheme = createTheme(getDashboardTheme(mode));
 
     // This code only runs on the client side, to determine the system color preference
@@ -53,7 +53,7 @@ export default function Dashboard() {
     // >
         <ThemeProvider theme={showCustomTheme ? dashboardTheme : defaultTheme}>
             <CssBaseline enableColorScheme />
-            <Box sx={{ display: 'flex', }}>
+            <Box sx={{ display: 'flex' }}>
                 <SideMenu />
                 <AppNavbar />
                 {/* Main content */}
@@ -71,7 +71,7 @@ export default function Dashboard() {
                             alignItems: 'center',
                             mx: 3,
                             pb: 1,
-                            mt: { xs: 8, md: 0, },
+                            mt: { xs: 8, md: 0 },
                         }}
                     >
                         <Header toggleColorMode={toggleColorMode} colorMode={mode} />

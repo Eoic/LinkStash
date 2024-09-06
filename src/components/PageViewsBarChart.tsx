@@ -15,16 +15,16 @@ export default function PageViewsBarChart() {
         theme.palette.primary.light
     ];
     return (
-        <Card variant="outlined" sx={{ width: '100%', }}>
+        <Card variant="outlined" sx={{ width: '100%' }}>
             <CardContent>
                 <Typography component="h2" variant="subtitle2" gutterBottom>
           Page views and downloads
                 </Typography>
-                <Stack sx={{ justifyContent: 'space-between', }}>
+                <Stack sx={{ justifyContent: 'space-between' }}>
                     <Stack
                         direction="row"
                         sx={{
-                            alignContent: { xs: 'center', sm: 'flex-start', },
+                            alignContent: { xs: 'center', sm: 'flex-start' },
                             alignItems: 'center',
                             gap: 1,
                         }}
@@ -34,7 +34,7 @@ export default function PageViewsBarChart() {
                         </Typography>
                         <Chip size="small" color="error" label="-8%" />
                     </Stack>
-                    <Typography variant="caption" sx={{ color: 'text.secondary', }}>
+                    <Typography variant="caption" sx={{ color: 'text.secondary' }}>
             Page views and downloads for the last 6 months
                     </Typography>
                 </Stack>
@@ -71,8 +71,8 @@ export default function PageViewsBarChart() {
                         }
                     ]}
                     height={250}
-                    margin={{ left: 50, right: 0, top: 20, bottom: 20, }}
-                    grid={{ horizontal: true, }}
+                    margin={{ left: 50, right: 0, top: 20, bottom: 20 }}
+                    grid={{ horizontal: true }}
                     slotProps={{
                         legend: {
                             hidden: true,

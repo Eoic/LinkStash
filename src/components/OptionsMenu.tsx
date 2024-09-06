@@ -29,7 +29,7 @@ export default function OptionsMenu() {
             <MenuButton
                 aria-label="Open menu"
                 onClick={handleClick}
-                sx={{ borderColor: 'transparent', }}
+                sx={{ borderColor: 'transparent' }}
             >
                 <MoreVertRoundedIcon />
             </MenuButton>
@@ -39,8 +39,8 @@ export default function OptionsMenu() {
                 open={open}
                 onClose={handleClose}
                 onClick={handleClose}
-                transformOrigin={{ horizontal: 'right', vertical: 'top', }}
-                anchorOrigin={{ horizontal: 'right', vertical: 'bottom', }}
+                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                 sx={{
                     [`& .${listClasses.root}`]: {
                         padding: '4px',

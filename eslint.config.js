@@ -32,7 +32,7 @@ export default tseslint.config(
             'eol-last': ['error', 'always'],
             'comma-dangle': ["error", {
                 "arrays": "never",
-                "objects": "always",
+                "objects": "only-multiline",
                 "imports": "never",
                 "exports": "never",
                 "functions": "never"
@@ -53,45 +53,3 @@ export default tseslint.config(
     },
 )
 
-
-// export default tseslint.config(
-//     eslint.configs.recommended,
-//     ...tseslint.configs.recommendedTypeChecked,
-//     {
-//         files: ['**/*.{ts,tsx}'],
-//         languageOptions: {
-//             parserOptions: {
-//                 project: './tsconfig.eslint.json',
-//                 tsconfigRootDir: import.meta.dirname,
-//             },
-//         },
-//         rules: {
-//             'no-unused-vars': 'off',
-//             curly: ['error', 'multi'],
-//             quotes: ['error', 'single'],
-//             indent: ['error', 4],
-//             'max-len': ['error', 120],
-//             'semi': ['error', 'always'],
-//             'eol-last': ['error', 'always'],
-//             'comma-dangle': ["error", {
-//                 "arrays": "never",
-//                 "objects": "always",
-//                 "imports": "never",
-//                 "exports": "never",
-//                 "functions": "never"
-//             }],
-//             '@typescript-eslint/no-unused-vars': [
-//                 'warn',
-//                 {
-//                     argsIgnorePattern: '^_',
-//                     varsIgnorePattern: '^_',
-//                     caughtErrorsIgnorePattern: '^_',
-//                 },
-//             ],
-//         },
-//     },
-//     {
-//         files: ['**/*.js'],
-//         ...tseslint.configs.disableTypeChecked,
-//     },
-// );

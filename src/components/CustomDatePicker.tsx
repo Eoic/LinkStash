@@ -30,8 +30,8 @@ function ButtonField(props: ButtonFieldProps) {
         label,
         id,
         disabled,
-        InputProps: { ref, } = {},
-        inputProps: { 'aria-label': ariaLabel, } = {},
+        InputProps: { ref } = {},
+        inputProps: { 'aria-label': ariaLabel } = {},
     } = props;
 
     return (
@@ -44,7 +44,7 @@ function ButtonField(props: ButtonFieldProps) {
             size="small"
             onClick={() => setOpen?.((prev) => !prev)}
             startIcon={<CalendarTodayRoundedIcon fontSize="small" />}
-            sx={{ minWidth: 'fit-content', }}
+            sx={{ minWidth: 'fit-content' }}
         >
             {label ? `${label}` : 'Pick a date'}
         </Button>
@@ -61,11 +61,11 @@ export default function CustomDatePicker() {
                 value={value}
                 label={value == null ? null : value.format('MMM DD, YYYY')}
                 onChange={(newValue) => setValue(newValue)}
-                slots={{ field: ButtonField, }}
+                slots={{ field: ButtonField }}
                 slotProps={{
-                    field: { setOpen, } as any,
-                    nextIconButton: { size: 'small', },
-                    previousIconButton: { size: 'small', },
+                    field: { setOpen } as any,
+                    nextIconButton: { size: 'small' },
+                    previousIconButton: { size: 'small' },
                 }}
                 open={open}
                 onClose={() => setOpen(false)}

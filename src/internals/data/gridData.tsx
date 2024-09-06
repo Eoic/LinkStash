@@ -23,14 +23,14 @@ function getDaysInMonth(month: number, year: number) {
 
 function renderSparklineCell(params: GridCellParams<SparkLineData, any>) {
     const data = getDaysInMonth(4, 2024);
-    const { value, colDef, } = params;
+    const { value, colDef } = params;
 
     if (!value || value.length === 0) 
         return null;
   
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center', height: '100%', }}>
+        <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
             <SparkLineChart
                 data={value}
                 width={colDef.computedWidth || 100}
@@ -79,7 +79,7 @@ export function renderAvatar(
 }
 
 export const columns: GridColDef[] = [
-    { field: 'pageTitle', headerName: 'Page Title', flex: 1.5, minWidth: 200, },
+    { field: 'pageTitle', headerName: 'Page Title', flex: 1.5, minWidth: 200 },
     {
         field: 'status',
         headerName: 'Status',

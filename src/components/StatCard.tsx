@@ -32,7 +32,7 @@ function getDaysInMonth(month: number, year: number) {
     return days;
 }
 
-function AreaGradient({ color, id, }: { color: string; id: string }) {
+function AreaGradient({ color, id }: { color: string; id: string }) {
     return (
         <defs>
             <linearGradient id={id} x1="50%" y1="0%" x2="50%" y2="100%">
@@ -76,33 +76,33 @@ export default function StatCard({
 
     const color = labelColors[trend];
     const chartColor = trendColors[trend];
-    const trendValues = { up: '+25%', down: '-25%', neutral: '+5%', };
+    const trendValues = { up: '+25%', down: '-25%', neutral: '+5%' };
 
     return (
-        <Card variant="outlined" sx={{ height: '100%', flexGrow: 1, }}>
+        <Card variant="outlined" sx={{ height: '100%', flexGrow: 1 }}>
             <CardContent>
                 <Typography component="h2" variant="subtitle2" gutterBottom>
                     {title}
                 </Typography>
                 <Stack
                     direction="column"
-                    sx={{ justifyContent: 'space-between', flexGrow: '1', gap: 1, }}
+                    sx={{ justifyContent: 'space-between', flexGrow: '1', gap: 1 }}
                 >
-                    <Stack sx={{ justifyContent: 'space-between', }}>
+                    <Stack sx={{ justifyContent: 'space-between' }}>
                         <Stack
                             direction="row"
-                            sx={{ justifyContent: 'space-between', alignItems: 'center', }}
+                            sx={{ justifyContent: 'space-between', alignItems: 'center' }}
                         >
                             <Typography variant="h4" component="p">
                                 {value}
                             </Typography>
                             <Chip size="small" color={color} label={trendValues[trend]} />
                         </Stack>
-                        <Typography variant="caption" sx={{ color: 'text.secondary', }}>
+                        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                             {interval}
                         </Typography>
                     </Stack>
-                    <Box sx={{ width: '100%', height: 50, }}>
+                    <Box sx={{ width: '100%', height: 50 }}>
                         <SparkLineChart
                             colors={[chartColor]}
                             data={data}

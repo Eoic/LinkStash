@@ -36,17 +36,17 @@ const ITEMS: TreeViewBaseItem<ExtendedTreeItemProps>[] = [
         id: '1',
         label: 'Website',
         children: [
-            { id: '1.1', label: 'Home', color: 'green', },
-            { id: '1.2', label: 'Pricing', color: 'green', },
-            { id: '1.3', label: 'About us', color: 'green', },
+            { id: '1.1', label: 'Home', color: 'green' },
+            { id: '1.2', label: 'Pricing', color: 'green' },
+            { id: '1.3', label: 'About us', color: 'green' },
             {
                 id: '1.4',
                 label: 'Blog',
                 children: [
-                    { id: '1.1.1', label: 'Announcements', color: 'blue', },
-                    { id: '1.1.2', label: 'April lookahead', color: 'blue', },
-                    { id: '1.1.3', label: 'What\'s new', color: 'blue', },
-                    { id: '1.1.4', label: 'Meet the team', color: 'blue', }
+                    { id: '1.1.1', label: 'Announcements', color: 'blue' },
+                    { id: '1.1.2', label: 'April lookahead', color: 'blue' },
+                    { id: '1.1.3', label: 'What\'s new', color: 'blue' },
+                    { id: '1.1.4', label: 'Meet the team', color: 'blue' }
                 ],
             }
         ],
@@ -55,27 +55,27 @@ const ITEMS: TreeViewBaseItem<ExtendedTreeItemProps>[] = [
         id: '2',
         label: 'Store',
         children: [
-            { id: '2.1', label: 'All products', color: 'green', },
+            { id: '2.1', label: 'All products', color: 'green' },
             {
                 id: '2.2',
                 label: 'Categories',
                 children: [
-                    { id: '2.2.1', label: 'Gadgets', color: 'blue', },
-                    { id: '2.2.2', label: 'Phones', color: 'blue', },
-                    { id: '2.2.3', label: 'Wearables', color: 'blue', }
+                    { id: '2.2.1', label: 'Gadgets', color: 'blue' },
+                    { id: '2.2.2', label: 'Phones', color: 'blue' },
+                    { id: '2.2.3', label: 'Wearables', color: 'blue' }
                 ],
             },
-            { id: '2.3', label: 'Bestsellers', color: 'green', },
-            { id: '2.4', label: 'Sales', color: 'green', }
+            { id: '2.3', label: 'Bestsellers', color: 'green' },
+            { id: '2.4', label: 'Sales', color: 'green' }
         ],
     },
-    { id: '4', label: 'Contact', color: 'blue', },
-    { id: '5', label: 'Help', color: 'blue', }
+    { id: '4', label: 'Contact', color: 'blue' },
+    { id: '5', label: 'Help', color: 'blue' }
 ];
 
-function DotIcon({ color, }: { color: string }) {
+function DotIcon({ color }: { color: string }) {
     return (
-        <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center', }}>
+        <Box sx={{ marginRight: 1, display: 'flex', alignItems: 'center' }}>
             <svg width={6} height={6}>
                 <circle cx={3} cy={3} r={3} fill={color} />
             </svg>
@@ -111,12 +111,12 @@ function CustomLabel({ color, expandable, children, ...other }: CustomLabelProps
 
     const iconColor = color ? colors[color] : null;
     return (
-        <TreeItem2Label {...other} sx={{ display: 'flex', alignItems: 'center', }}>
+        <TreeItem2Label {...other} sx={{ display: 'flex', alignItems: 'center' }}>
             {iconColor && <DotIcon color={iconColor} />}
             <Typography
                 className="labelText"
                 variant="body2"
-                sx={{ color: 'text.primary', }}
+                sx={{ color: 'text.primary' }}
             >
                 {children}
             </Typography>
@@ -142,7 +142,7 @@ const CustomTreeItem = React.forwardRef(function CustomTreeItem(
         getGroupTransitionProps,
         status,
         publicAPI,
-    } = useTreeItem2({ id, itemId, children, label, disabled, rootRef: ref, });
+    } = useTreeItem2({ id, itemId, children, label, disabled, rootRef: ref });
 
     const item = publicAPI.getItem(itemId);
     const color = item?.color;
@@ -165,11 +165,11 @@ const CustomTreeItem = React.forwardRef(function CustomTreeItem(
                         </TreeItem2IconContainer>
                     )}
 
-                    <CustomLabel {...getLabelProps({ color, })} />
+                    <CustomLabel {...getLabelProps({ color })} />
                 </TreeItem2Content>
                 {children && (
                     <TransitionComponent
-                        {...getGroupTransitionProps({ className: 'groupTransition', })}
+                        {...getGroupTransitionProps({ className: 'groupTransition' })}
                     />
                 )}
             </TreeItem2Root>
@@ -181,7 +181,7 @@ export default function CustomizedTreeView() {
     return (
         <Card
             variant="outlined"
-            sx={{ display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1, }}
+            sx={{ display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1 }}
         >
             <CardContent>
                 <Typography component="h2" variant="subtitle2">
@@ -200,7 +200,7 @@ export default function CustomizedTreeView() {
                         flexGrow: 1,
                         overflowY: 'auto',
                     }}
-                    slots={{ item: CustomTreeItem, }}
+                    slots={{ item: CustomTreeItem }}
                 />
             </CardContent>
         </Card>

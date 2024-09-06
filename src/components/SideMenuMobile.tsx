@@ -17,7 +17,7 @@ interface SideMenuMobileProps {
   toggleDrawer: (newOpen: boolean) => () => void;
 }
 
-export default function SideMenuMobile({ open, toggleDrawer, }: SideMenuMobileProps) {
+export default function SideMenuMobile({ open, toggleDrawer }: SideMenuMobileProps) {
     return (
         <Drawer
             anchor="right"
@@ -36,16 +36,16 @@ export default function SideMenuMobile({ open, toggleDrawer, }: SideMenuMobilePr
                     height: '100%',
                 }}
             >
-                <Stack direction="row" sx={{ p: 2, pb: 0, gap: 1, }}>
+                <Stack direction="row" sx={{ p: 2, pb: 0, gap: 1 }}>
                     <Stack
                         direction="row"
-                        sx={{ gap: 1, alignItems: 'center', flexGrow: 1, p: 1, }}
+                        sx={{ gap: 1, alignItems: 'center', flexGrow: 1, p: 1 }}
                     >
                         <Avatar
                             sizes="small"
                             alt="Riley Carter"
                             src="/static/images/avatar/7.jpg"
-                            sx={{ width: 24, height: 24, }}
+                            sx={{ width: 24, height: 24 }}
                         />
                         <Typography component="p" variant="h6">
               Riley Carter
@@ -56,12 +56,12 @@ export default function SideMenuMobile({ open, toggleDrawer, }: SideMenuMobilePr
                     </MenuButton>
                 </Stack>
                 <Divider />
-                <Stack sx={{ flexGrow: 1, }}>
+                <Stack sx={{ flexGrow: 1 }}>
                     <MenuContent />
                     <Divider />
                 </Stack>
                 <CardAlert />
-                <Stack sx={{ p: 2, }}>
+                <Stack sx={{ p: 2 }}>
                     <Button variant="outlined" fullWidth startIcon={<LogoutRoundedIcon />}>
             Logout
                     </Button>
