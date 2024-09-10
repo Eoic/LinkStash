@@ -1,0 +1,16 @@
+# Table of contents
+
+* [Introduction](README.md)
+* [Features](features.md)
+* [Target audience](target-audience.md)
+* [Technologies](technologies.md)
+* [Requirements](requirements/README.md)
+  * [Functional requirements](requirements/functional-requirements.md)
+  * [Non-functional requirements](requirements/non-functional-requirements.md)
+* [Data model](data-model.md)
+* [Architecture](architecture.md)
+* [User interface](user-interface.md)
+* [Testing and quality assurance](testing-and-quality-assurance.md)
+* [Deployment](deployment.md)
+* [Documentation](documentation.md)
+* [Appendices](appendices.md)
